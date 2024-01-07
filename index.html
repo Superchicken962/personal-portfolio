@@ -3,92 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unavailable</title>
-    <style>
-        body {
-            background-color: rgb(45,45,45);
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .notice {
-            display: block;
-            margin: auto;
-            position: absolute;
-            top:0;right:0;
-            bottom:0;left:0;
-            width: fit-content;
-            height: fit-content;
-            background-color: #1e1e1e;
-            padding: 12px 32px;
-        }
-    </style>
+    <title>Mark Gurney</title>
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-    <div class="notice">
-        <h1>Not Available Yet!</h1>
-        <h3>My portfolio is not yet ready for public release!</h3>
-        <p>Estimated time: <span class="relative-time" data-timestamp="1704677400000"></span></p>
+    <div class="profile">
+        <!-- <img src=""/> -->
+        <div class="content">
+            <h2 class="name">Mark Gurney</h2>
+            <p class="description">Self-taught fullstack developer in JavaScript/Node.js<br>Currently learning bits of Java and C#<p>
+            <p class="age"><span class="relative_time" data-timestamp="1136498400000" data-format="Year">?</span> Years Old <span class="birthdate">06/01/2006</span></p>
+        </div>
     </div>
+
+    <div class="projects"></div>
+    
 </body>
-<script>
-    function updateTimestamps() {
-        let timestamp_elements = [...document.querySelectorAll(".relative-time")];
+<footer>
+    <p>
+        <div class="webtheme">
+            <label>Theme:</label> 
+            <select class="webtheme_toggle">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="midnight">Midnight Blue</option>
+            </select>
+        </div>
+        Mark Gurney • 2024
+    </p>
+</footer>
 
-        for (const element of timestamp_elements) {
-            // skip elements which do not contain timestamps
-            if (!element.getAttribute("data-timestamp")) {
-                element.innerHTML = "No Timestamp Provided!";
-                continue; // continue instead of return, so the next elements are still looped through
-            };
-
-            const time_diff = parseInt(element.getAttribute("data-timestamp")) - Date.now();
-
-            const secs = Math.abs(time_diff/1000);
-            const mins = Math.abs(time_diff/1000/60);
-            const hours = Math.abs(time_diff/1000/60/60);
-            const days = Math.abs(time_diff/1000/60/60/24);
-            const weeks = Math.abs(time_diff/1000/60/60/24/7);
-            const months = Math.abs(time_diff/1000/60/60/24/7/4);
-            const years = Math.abs(time_diff/1000/60/60/24/7/4/12);
-
-            // 
-            let str = Math.floor(secs)+" second"+followingS(Math.floor(secs));
-
-            if (secs >= 60) {
-                str = `${Math.floor(mins)} minute${followingS(Math.floor(mins))} and ${Math.floor(secs%60)} second${followingS(Math.floor(secs%60))}`;
-            }
-            if (mins >= 60) {
-                str = `${Math.floor(hours)} hour${followingS(Math.floor(hours))} and ${Math.floor(mins%60)} minute${followingS(Math.floor(mins%60))}`;
-            }
-            if (hours >= 24) {
-                str = `${Math.floor(days)} day${followingS(Math.floor(days))} and ${Math.floor(hours%24)} hour${followingS(Math.floor(hours%24))}`;
-            }
-            if (days >= 7) {
-                str = `${Math.floor(weeks)} week${followingS(Math.floor(weeks))} ${Math.floor(days%7)==0 ? "" : `and ${Math.floor(days%7)} day${followingS(Math.floor(days%7))}`}`;
-            }
-            if (weeks >= 7) {
-                str = `${Math.floor(months)} month${followingS(Math.floor(months))} ${Math.floor(weeks%52)==0 ? "" : `and ${Math.floor(weeks%52)} week${followingS(Math.floor(weeks%52))}`}`;
-            }
-            if (months >= 12) {
-                str = `${Math.floor(years)} year${followingS(Math.floor(years))} ${Math.floor(months%12)==0 ? "" : `and ${Math.floor(months%12)} month${followingS(Math.floor(months%12))}`}`;
-            }
-
-            element.innerHTML = str;
-        }
-    }
-
-    // simple function that returns 's' if number !== 0 (used for string display of number)
-    function followingS(number) {
-        let returnStr = "";
-
-        // Math.abs to ignore negative, as -1 and 1 both have same rule of the 'following s'
-        if (Math.abs(number) !== 1) {
-            returnStr = "s";
-        }
-
-        return returnStr;
-    }
-
-    updateTimestamps();
-</script>
+<script src="js/includes/Projects.js"></script>
+<script src="js/index.js"></script>
+<script src="js/footer.js"></script>
 </html>
