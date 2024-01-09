@@ -10,6 +10,14 @@
     --projectEvenTheme: rgb(30,35,35);
     --projectHover: aqua;
     --projectHoverBackground: rgba(0,255,255,0.2);
+
+    --pageButtonTheme: linear-gradient(90deg, rgb(52,51,53), rgb(64,63,66));
+    --pageButtonThemeHover: aqua;
+    --pageButtonThemeHoverBackground: rgba(0,255,255,0.2);
+    --pageButtonThemeBoxShadow: 5px 5px 10px black;
+
+    --primaryButtonTheme: rgb(52,52,52);
+    --primaryButtonBorderTheme: rgb(38,38,38);
 }
 
 body {
@@ -17,6 +25,7 @@ body {
     color: var(--textColour);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s ease-in-out background-color;
 }
 
 .profile {
@@ -28,6 +37,7 @@ body {
     margin-top: 15px;
     padding: 12px;
     border-radius: 12px;
+    transition: 0.5s ease-in-out background-color;
 }
 .profile img {
     display: inline-block;
@@ -49,10 +59,9 @@ body {
 
 .projects {
     display: block;
+    position: relative;
     margin: auto;
     height: 60vh;
-    /* height: fit-content; */
-    /* min-height: 450px; */
     background-color: var(--mainTheme);
     width: 80%;
     border-radius: 12px;
@@ -60,7 +69,8 @@ body {
     overflow-y: auto;
     margin-top: 20px;
     margin-bottom: 50px;
-    padding: 12px;
+    padding: 0 18px;
+    transition: 0.5s ease-in-out background-color;
 }
 .projects h1, .projects .desc {
     text-align: center;
@@ -77,7 +87,7 @@ body {
     padding: 8px 0;
     margin-bottom: 15px;
     border-radius: 10px;
-    transition: 0.5s ease-in-out opacity;
+    /* transition: 0.5s ease-in-out opacity, 0.5s ease-in-out background-color; */
     overflow: hidden;
 }
 .projects .project:nth-child(even) {
@@ -119,16 +129,46 @@ body {
     cursor: pointer;
 }
 
-/* .projects .project:hover {
+.projects .project:hover {
     box-shadow: 0 0 10px aqua;
     background-color: rgba(0, 255, 255, 0.2);
     cursor: pointer;
-} */
+}
 
 .projects .project .content {
     display: block;
     margin: auto;
     margin-left: 20px;
+}
+
+.projects .project_info .languages {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+.projects .project_info {
+    text-align: center;
+}
+
+.projects .project_info .backBtn {
+    display: block;
+    margin: auto;
+    position: absolute;
+    top:0;left:0;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 36px;
+    font-size: 20px;
+    border-bottom-right-radius: 15px;
+    background-color: var(--primaryButtonTheme);
+    border-right: 2px solid var(--primaryButtonBorderTheme);
+    border-bottom: 2px solid var(--primaryButtonBorderTheme);
+}
+.projects .project_info .backBtn:hover {
+    background-color: var(--primaryButtonBorderTheme);
+    border-right: 2px solid var(--primaryButtonTheme);
+    border-bottom: 2px solid var(--primaryButtonTheme);
+    cursor: pointer;
 }
 
 .languages {
@@ -162,7 +202,7 @@ body {
 footer {
     display: block;
     margin: auto;
-    position: absolute;
+    position: fixed;
     left:0;
     right:0;
     bottom:0;
@@ -185,4 +225,82 @@ footer {
 }
 .webtheme select option {
     color: var(--textColour);
+}
+
+.portfolio_navigation {
+    display: block;
+    margin: auto;
+    height: 150px;
+    width: 80%;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.5s ease-in-out background-color;
+}
+.portfolio_navigation .page {
+    display: inline-block;
+    margin: auto;
+    background: var(--pageButtonTheme);
+    padding: 8px 24px;
+    border-radius: 12px;
+    height: 500px;
+    width: 350px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: var(--pageButtonThemeBoxShadow);
+    transition: 0.3s ease-in-out transform;
+    vertical-align: top;
+    color: white;
+    text-decoration: none;
+    cursor: default;
+}
+.portfolio_navigation .page:any-link:hover {
+    background: var(--pageButtonThemeHoverBackground);
+    box-shadow: 0 0 10px var(--pageButtonThemeHover);
+    cursor: pointer;
+    transform: translate(0, -20px);
+}
+
+.navigation_bar {
+    display: block;
+    margin: auto;
+    width: 60%;
+    background-color: var(--mainTheme);
+    padding: 14px;
+    border-radius: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+.navigation_bar a {
+    display: inline-block;
+    margin: auto;
+    width: fit-content;
+    padding: 4px 24px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--textColour);
+}
+.navigation_bar a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.project_info .assets {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+.project_info .asset {
+    display: block;
+    margin: auto;
+    background-color: var(--secondaryTheme);
+    padding: 4px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+.project_info .asset img {
+    width: 80%;
 }
