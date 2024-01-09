@@ -36,7 +36,7 @@ if (theme_selector) {
     }
 }
 
-const defaultTheme = "light";
+const defaultTheme = "dark";
 
 function loadTheme() {
     let theme = getCookie("WebTheme") || defaultTheme;
