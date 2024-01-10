@@ -20,7 +20,7 @@ function updateProjectInfo(projectId, selector) {
     <p>${project.description_long || project.description}</p>
 
     <div class="assets">
-        ${(project.assets) ? project.assets.map(asset => `<div class="asset"><img class="asset_img" src="assets/projects/${asset.filename}"/><p>${asset.desc}</p></div>`).join("") : "<i>No Images Available</i>"}
+        ${(project.assets) ? project.assets.map(asset => `<div class="asset"><img class="asset_img" src="assets/projects/${(asset.filename.split(".")[0]) + "." + asset.filename.split(".").slice(1).join(".").toLowerCase() }"/><p>${asset.desc}</p></div>`).join("") : "<i>No Images Available</i>"}
     </div>
     `;
     
