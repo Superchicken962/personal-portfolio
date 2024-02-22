@@ -36,7 +36,7 @@ function updateProjectsList() {
 
             <div class="badges">
                 ${(project.github) ? `<a class="github" href="${project.github}" target="_blank" title="Github Repository"></a>` : ""}
-                ${(project.viewonline) ? `<a class="viewonline" href="${project.viewonline}" target="_blank" title="View Live"></a>` : ""}
+                ${(project.viewonline === Infinity) ? `<a class="viewonline" href="${project.viewonline}" target="_blank" title="View Live"></a>` : ""}
             </div>
         </div>
         `;

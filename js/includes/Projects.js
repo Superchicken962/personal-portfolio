@@ -1,5 +1,37 @@
 const Projects = [
     {
+        "name": "YouTube Auto Adskipper",
+        "description": "Auto skips ads on youtube, and speeds up unskippable ads. Also features a ranking system based number of ads skipped by users.",
+        "purpose": "Personal",
+        "year": "2024",
+        "skills_developed": [
+            "Chrome extension development"
+        ],
+        "languages": [
+            "HTML",
+            "JavaScript"
+        ],
+        "assets": [],
+        "github": null,
+        "private": false,
+        "viewonline": "https://chromewebstore.google.com/detail/youtube-ad-auto-skip-mute/ipenehognpepmfokjeckpbenhjfchcfd"
+    },
+    {
+        "name": "Basic Discord Rich Presence Tool",
+        "description": "Simply just sets discord rich presence info from a config file using a discordrpc library",
+        "purpose": " Personal",
+        "year": "2024",
+        "skills_developed": [
+            "Learning C#"
+        ],
+        "languages": [
+            "C#"
+        ],
+        "assets": [],
+        "github": null,
+        "private": true
+    },
+    {
         "name": "OMSI 2 WebServer / Info Tool",
         "description": "Takes information from OMSI 2, and sends it to a webserver to be displayed like a real time bus app.",
         "purpose": "Personal",
@@ -44,7 +76,9 @@ const Projects = [
         "description": "Website for simulating unboxing cases in 'Team Fortress 2'. Uses localStorage in JavaScript to store items, and fake money for the user.",
         "purpose": "Personal",
         "year": "2023",
-        "skills_developed": [],
+        "skills_developed": [
+            "Web scraping"
+        ],
         "languages": [
             "HTML",
             "CSS",
@@ -87,7 +121,7 @@ const Projects = [
     },
     {
         "name": "Adelaide Public Transport Website",
-        "description": "Uses the adelaide metro api to show arrivals at stops, live vehicles and vehicle information.",
+        "description": "Uses the adelaide metro api to show arrivals at stops, live vehicles and vehicle information. Development has since continued after the assignment, and should be published in the next few weeks.",
         "purpose": "School Assignment",
         "year": "2023",
         "skills_developed": [
@@ -153,23 +187,23 @@ const Projects = [
         "private": true
     },
 
-    {
-        "name": "Mybraincells",
-        "description": "One of the very first websites I created, and published. Home to some 'inside jokes' and also where I applied a lot of my learning in programming along the way.",
-        "purpose": "Personal (\"Inside\" Joke)",
-        "year": "2020",
-        "skills_developed": [
-            "Styling",
-            "JavaScript",
-            "PHP"
-        ],
-        "languages": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "PHP"
-        ],
-        "viewonline": "https://mybraincells.cf",
-        "private": false
-    }
+    // {
+    //     "name": "Mybraincells",
+    //     "description": "One of the very first websites I created, and published. Home to some 'inside jokes' and also where I applied a lot of my learning in programming along the way.",
+    //     "purpose": "Personal (\"Inside\" Joke)",
+    //     "year": "2020",
+    //     "skills_developed": [
+    //         "Styling",
+    //         "JavaScript",
+    //         "PHP"
+    //     ],
+    //     "languages": [
+    //         "HTML",
+    //         "CSS",
+    //         "JavaScript",
+    //         "PHP"
+    //     ],
+    //     "viewonline": "https://mybraincells.cf",
+    //     "private": false
+    // }
 ];
