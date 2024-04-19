@@ -112,6 +112,10 @@ function loadTheme() {
         case "basic":
             root.style.setProperty("--font", "cursor");
 
+            if (theme_selector) {
+                theme_selector.value = "basic";
+            }
+
         default:
         case "dark":
             root.style.setProperty("--textColour", "white");
