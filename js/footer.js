@@ -108,6 +108,9 @@ function loadTheme() {
             }
             
             break;
+        
+        case "basic":
+            root.style.setProperty("--font", "cursor");
 
         default:
         case "dark":
