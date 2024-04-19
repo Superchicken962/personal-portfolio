@@ -76,6 +76,8 @@ function loadTheme() {
             root.style.setProperty("--primaryButtonTheme", "rgb(152,152,152)");
             root.style.setProperty("--primaryButtonBorderTheme", "rgb(210,210,210)");
             
+            root.style.setProperty("--font", "Arial, Helvetica, sans-serif");
+
             if (theme_selector) {
                 theme_selector.value = "light";
             }
@@ -103,6 +105,8 @@ function loadTheme() {
             root.style.setProperty("--primaryButtonTheme", "rgb(10,10,42)");
             root.style.setProperty("--primaryButtonBorderTheme", "rgb(0,0,120)");
 
+            root.style.setProperty("--font", "Arial, Helvetica, sans-serif");
+
             if (theme_selector) {
                 theme_selector.value = "midnight";
             }
@@ -110,11 +114,32 @@ function loadTheme() {
             break;
         
         case "basic":
+            root.style.setProperty("--textColour", "white");
+            root.style.setProperty("--feintTextColour", "grey");
+            root.style.setProperty("--mainTheme", "rgb(25,25,25)");
+            root.style.setProperty("--secondaryTheme", "rgb(35,35,35)");
+            root.style.setProperty("--bodyTheme", "rgb(45,45,45)");
+            root.style.setProperty("--languageBoxTheme", "rgba(15,15,15,0.8)");
+            root.style.setProperty("--projectTheme", "rgb(35,35,35)");
+            root.style.setProperty("--projectEvenTheme", "rgb(30,35,35)");
+            root.style.setProperty("--projectHover", "rgb(0,255,255)");
+            root.style.setProperty("--projectHoverBackground", "rgba(0,255,255,0.2)");
+
+            root.style.setProperty("--pageButtonTheme", "linear-gradient(90deg, rgb(52,51,53), rgb(64,63,66))");
+            root.style.setProperty("--pageButtonThemeHover", "grey");
+            root.style.setProperty("--pageButtonThemeHoverBackground", "rgba(128,128,128,0.2)");
+            root.style.setProperty("--pageButtonThemeBoxShadow", "5px 5px 10px rgb(10,10,10)");
+
+            root.style.setProperty("--primaryButtonTheme", "rgb(52,52,52)");
+            root.style.setProperty("--primaryButtonBorderTheme", "rgb(38,38,38)");
+            
             root.style.setProperty("--font", "cursor");
 
             if (theme_selector) {
                 theme_selector.value = "basic";
             }
+
+            break;
 
         default:
         case "dark":
@@ -136,6 +161,8 @@ function loadTheme() {
 
             root.style.setProperty("--primaryButtonTheme", "rgb(52,52,52)");
             root.style.setProperty("--primaryButtonBorderTheme", "rgb(38,38,38)");
+            
+            root.style.setProperty("--font", "Arial, Helvetica, sans-serif");
 
             if (theme_selector) {
                 theme_selector.value = "dark";
