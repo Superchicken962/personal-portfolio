@@ -310,7 +310,9 @@ footer {
     margin-bottom: 15px;
 }
 .project_info .asset img {
-    width: 80%;
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
 }
 
 .timeline {

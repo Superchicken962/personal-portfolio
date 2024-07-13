@@ -1,5 +1,64 @@
 const Projects = [
     {
+        "name": "Adelaide Bus Notifier",
+        "description": "Script to send webhooks to Discord when a vehicle from a configured list of vehicles is found in service.<br>Additionally, it sends a screenshot of my transport website to show where the vehicle is, without needing to do it's own work.",
+        "purpose": "Personal",
+        "year": "2024",
+        "skills_developed": [],
+        "languages": [
+            "Node.js"
+        ],
+        "assets": [
+            {"desc": "Discord message notifying me about bus '7032' being in service / starting a route.", "filename": "adelaidebusnotifier_bus1.PNG"},
+            {"desc": "Discord message notifying me about bus '2801' being in service / starting a route.", "filename": "adelaidebusnotifier_bus2.PNG"}
+        ],
+        "github": "https://github.com/Superchicken962/adelaide-bus-notifier",
+        "private": false,
+        "viewonline": null
+    },
+    {
+        "name": "Facebook Marketplace Car Fetcher",
+        "description": "Script to scrape marketplace for any new or updated car listings, and to notify me on Discord if there is.<br><br>\"Work smarter, not harder.\"",
+        "purpose": "Personal",
+        "year": "2024",
+        "skills_developed": [
+            "Web scraping"
+        ],
+        "languages": [
+            "Node.js"
+        ],
+        "assets": [
+            {"desc": "Discord webhook notifying me that a car listing has had it's price changed.", "filename": "marketplacescraper_result1.PNG"}
+        ],
+        "github": null,
+        "private": true,
+        "viewonline": null
+    },
+    {
+        "name": "Spotify Quiz Website",
+        "description": "Website to quiz you on songs from any given Spotify playlist or album. Planning to \"publish\" it at some point...",
+        "purpose": "Personal",
+        "year": "2024",
+        "skills_developed": [
+            "Working with Spotify API"
+        ],
+        "languages": [
+            "Node.js",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "assets": [
+            {"desc": "Setup menu for creating a singleplayer game.", "filename": "spotifysongquiz_startsp.PNG"},
+            {"desc": "Singleplayer game in progress - a \"preview\" of the correct song plays to the user, and they must choose the correct song.", "filename": "spotifysongquiz_spgame1.PNG"},
+            {"desc": "Singleplayer game in progress - The correct song was chosen.", "filename": "spotifysongquiz_spgame_correct.PNG"},
+            {"desc": "Singleplayer game in progress - The song chosen was incorrect.", "filename": "spotifysongquiz_spgame_wrong.PNG"},
+        ],
+        "github": null,
+        "private": true,
+        "viewonline": null
+    },
+    {
         "name": "YouTube Auto Adskipper",
         "description": "Auto skips ads on youtube, and speeds up unskippable ads. Also features a ranking system based number of ads skipped by users.",
         "purpose": "Personal",
@@ -122,8 +181,8 @@ const Projects = [
     {
         "name": "Adelaide Public Transport Website",
         "description": "Uses the adelaide metro api to show arrivals at stops, live vehicles and vehicle information. Development has since continued after the assignment, and should be published in the next few weeks.",
-        "purpose": "School Assignment",
-        "year": "2023",
+        "purpose": "School Assignment / Personal",
+        "year": "2023-2024",
         "skills_developed": [
             "Furthering skills in Node.js / Express.js",
         ],
@@ -143,7 +202,8 @@ const Projects = [
             {"desc": "Trip information, including estimated next services as well as the vehicles that previously serviced the trip", "filename": "adelaidebuswebsite_image6.PNG"},
             {"desc": "Live vehicle information - show vehicle position on map, with the next stops and it's punctuality", "filename": "adelaidebuswebsite_image7.PNG"},
         ],
-        "private": true
+        "private": false,
+        "viewonline": "https://apt.markgurney.dev/"
     },
     {
         "name": "Local File Music Player",
