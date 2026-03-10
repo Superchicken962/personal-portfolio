@@ -113,7 +113,7 @@ function loadTheme() {
             
             break;
         
-        case "basic":
+        case "handwritten":
             root.style.setProperty("--textColour", "white");
             root.style.setProperty("--feintTextColour", "grey");
             root.style.setProperty("--mainTheme", "rgb(25,25,25)");
@@ -136,7 +136,7 @@ function loadTheme() {
             root.style.setProperty("--font", "cursor");
 
             if (theme_selector) {
-                theme_selector.value = "basic";
+                theme_selector.value = "handwritten";
             }
 
             break;
