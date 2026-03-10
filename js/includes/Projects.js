@@ -179,12 +179,13 @@ const Projects = [
         "private": true
     },
     {
-        "name": "Adelaide Public Transport Website",
-        "description": "Uses the adelaide metro api to show arrivals at stops, live vehicles and vehicle information. Development has since continued after the assignment, and should be published in the next few weeks.",
+        "name": "Adelaide Bus Tracker Website",
+        "description": "Uses the Adelaide Metro API to show arrivals at stops, live vehicles and vehicle information. Vehicle data is regularly monitored and saved to a database to show last performed trips and such.<br><br>Note: Images are very outdated, and are pending an update.",
         "purpose": "School Assignment / Personal",
-        "year": "2023-2024",
+        "year": "2023-2026",
         "skills_developed": [
-            "Furthering skills in Node.js / Express.js",
+            "Express.js",
+            "Relational Databases in SQL"
         ],
         "languages": [
             "HTML",
@@ -198,12 +199,12 @@ const Projects = [
             {"desc": "List of stops within 1km of geolocation (alternatively, search bar can be used)", "filename": "adelaidebuswebsite_image2.PNG"},
             {"desc": "Stop information with next & previous arrivals and any service alerts that may apply to a route stopping there", "filename": "adelaidebuswebsite_image3.PNG"},
             {"desc": "Favourite stops and vehicles for logged in users", "filename": "adelaidebuswebsite_image4.PNG"},
-            {"desc": "'Last seen' vehicle information - vehicle positions are stored in database when in service, then retrieved if not in service when checking page", "filename": "adelaidebuswebsite_image5.PNG"},
+            {"desc": "'Last seen' vehicle information - Vehicle positions are stored in the database when in service, then retrieved if not in service when accessing the page", "filename": "adelaidebuswebsite_image5.PNG"},
             {"desc": "Trip information, including estimated next services as well as the vehicles that previously serviced the trip", "filename": "adelaidebuswebsite_image6.PNG"},
             {"desc": "Live vehicle information - show vehicle position on map, with the next stops and it's punctuality", "filename": "adelaidebuswebsite_image7.PNG"},
         ],
         "private": false,
-        "viewonline": "https://apt.markgurney.dev/"
+        "viewonline": "https://adelaidebustracker.com/"
     },
     {
         "name": "Local File Music Player",
